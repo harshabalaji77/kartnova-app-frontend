@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ProductList } from '../components/ProductList';
 import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
-import heroLogoImage from '../assets/hero-logo-image.jpg';
+import heroLogoImage from '../assets/hero-image.jpg';
 import '../styles/styles.css';
 
 export default function HomePage() {

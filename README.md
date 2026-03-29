@@ -9,6 +9,8 @@ A modern, responsive e-commerce frontend application built with React and Vite. 
 - **Product Browsing**: Browse products with intuitive category navigation
 - **Shopping Cart**: Add/remove items, update quantities in real-time
 - **Order Management**: View order history and track delivery status
+- **Product Discovery**: Explore dedicated products section
+- **About Section**: Learn more about the platform
 - **Responsive Design**: Optimized experience across desktop, tablet, and mobile
 
 #### Admin Dashboard
@@ -72,12 +74,14 @@ src/
 │   ├── ProductList.jsx        # Product grid display
 │   └── ProfileDropdown.jsx    # User profile menu
 ├── pages/              # Page-level components
+│   ├── AboutPage.jsx          # About the platform information
 │   ├── AdminDashboard.jsx     # Admin main interface
 │   ├── AdminLogin.jsx         # Admin authentication
 │   ├── CartPage.jsx           # Shopping cart page
-│   ├── CustomerHomePage.jsx   # Customer main interface
+│   ├── HomePage.jsx           # Customer main interface
 │   ├── LoginPage.jsx          # Customer authentication
 │   ├── OrderPage.jsx          # Order management
+│   ├── ProductsPage.jsx      # Products browsing section
 │   └── RegistrationPage.jsx   # New user registration
 ├── styles/             # Global and component styles
 │   └── styles.css             # Main stylesheet
@@ -87,12 +91,31 @@ src/
 └── main.jsx            # Application entry point
 ```
 
-### 🌐 Application Routes
+### �️ Architecture Overview
+
+Kartnova follows a modern React architecture with clear separation of concerns:
+
+- **Component-Based Architecture**: Reusable UI components with single responsibility
+- **Route-Driven Navigation**: Client-side routing with React Router DOM
+- **State Management**: React hooks for local state and component communication
+- **Modular Styling**: CSS modules and component-specific stylesheets
+- **Responsive Design**: Mobile-first approach with fluid layouts
+
+### 🔧 Development Environment
+
+- **Hot Module Replacement**: Instant development feedback
+- **ESLint Integration**: Code quality and consistency enforcement
+- **Modern JavaScript**: ES6+ features and async/await patterns
+- **Component Lifecycle**: React 19 hooks-based development
+
+### � Application Routes
 
 #### Customer Routes
 - `/` - Customer login page (default entry point)
 - `/register` - New user registration
 - `/home` - Customer homepage with product listings
+- `/products` - Dedicated products browsing section
+- `/about` - About the platform information
 - `/cart` - Shopping cart management interface
 - `/orders` - Order history and tracking
 
@@ -133,45 +156,5 @@ We welcome contributions! Please follow these steps:
 5. **Push** to your branch: `git push origin feature/amazing-feature`
 6. **Open** a Pull Request with a clear description
 
-### 📝 Development Guidelines
 
-- Follow React best practices and modern hooks patterns
-- Use semantic HTML5 elements for better accessibility
-- Maintain consistent naming conventions across the codebase
-- Write clean, well-commented code for future maintenance
-- Ensure responsive design works across all device sizes
-- Test thoroughly before submitting changes
-
-### 🐛 Troubleshooting
-
-#### Common Development Issues
-
-**Port Already in Use**
-```bash
-# Kill the process using the port
-npx kill-port 5173
-
-# Or use a different port
-npm run dev -- --port 3000
-```
-
-**Dependency Issues**
-```bash
-# Clear cache and reinstall dependencies
-npm cache clean --force
-rm -rf node_modules package-lock.json
-npm install
-```
-
-**Build Errors**
-```bash
-# Check for linting issues
-npm run lint
-
-# Clear build cache
-npm run build -- --force
-```
-
----
-
-**Built with ❤️ using React and Vite**
+If you like this repository, give it a star! ⭐
